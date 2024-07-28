@@ -1,0 +1,10 @@
+React is not just limited to browsers.
+React also works on mobile devices and in many more areas.
+
+React is the core library of the React.
+ReactDom library means the web version of React.
+
+Since the createElement() method was not user friendly the developers come with a new idea -> JSX
+
+React: Focuses on building UI components.
+ReactDOM: Handles rendering those components to the DOM.

@@ -79,6 +79,8 @@ parcel:
   Consistent Hashing algorithm
 
   Zero Configuration(you dont have to do anything)
+
+  Tree Shaking --> removing unwanted code
 ]
 
 we should put parcel-chace in gitignore
@@ -100,4 +102,5 @@ and in this minified files all the import packages code is inserted.
   and it will take array(check browserlist.dev website for more info)
 
   "browserlist":['last 2 versions'] -> app will work on last 2 version of all the browsers available.
+  "browserlist":['last 2 Chrome versions'] -> app must work on last 2 Chrome version and might work on different browsers and versions.
 ]

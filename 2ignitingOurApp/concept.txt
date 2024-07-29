@@ -104,3 +104,20 @@ and in this minified files all the import packages code is inserted.
   "browserlist":['last 2 versions'] -> app will work on last 2 version of all the browsers available.
   "browserlist":['last 2 Chrome versions'] -> app must work on last 2 Chrome version and might work on different browsers and versions.
 ]
+
+[
+  The .parcel-cache directory is a folder created by Parcel, the web application bundler. 
+  This directory is used to store cache files that help Parcel speed up subsequent builds of your project. 
+]
+
+[
+  npx is a command-line tool that comes with npm (Node Package Manager) starting from version 5.2.0. 
+  It stands for "Node Package Execute" and is used to execute Node.js packages directly from the npm 
+  registry without having to install them globally on your system.
+]
+
+[
+  The node_modules directory is a fundamental part of a Node.js project. 
+  It stores all the project dependencies (packages) that are installed using 
+  the Node Package Manager (npm) or Yarn.
+]

@@ -1,0 +1,103 @@
+[
+  Anything that is auto-generated will be put inside gitignore.
+  Anything we can generate on server can be put inside gitignore.
+]
+
+[
+  Transitive dependencies means one thing depend on other and that other on some other and so on.
+]
+
+Bundlers: vite, parcel, webpack.
+in 'create react app' the bundler used is 'webpack'.
+bundlers are packages.
+we need to install parcel package(through package manager-> npm(npm's full form is not node package manager)).
+
+to get npm -> npm init
+to skip a lot of options -> npm init -y
+
+[--save-dev  === -D]
+
+^2.3.3 (here '^' is caret and used for upgrading minor versions and you can also use tilde '~' which will upgrade major versions also).
+
+package-lock.json --> locks the version of the dependencies you are using so that in future if dependencies get
+upgraded it won't affect the app.
+
+node_modules is like a database for your npm(whatever you install gets stored in node_modules)
+
+we have parcel as a dependency and parcel has its own dependency and they have their own and so on.
+
+we can generate everything that is in node_modules if I have my package.json and package-lock.json.
+we can delete the node_modules before pushing our code to git coz we can regenerate it anytime using package.json and package-lock.json.
+
+[
+  using React through CDN links is not a good practice coz if newer versions come then you have to change the links.
+
+  React comes as a package, and you can install it using npm and we will install React globally.
+]
+
+[npm install === npm i]
+
+[
+  npx -> execute using npm
+
+  npx parcel entryPoint -> starts our app
+  parcel created a mini-server and gives us a portNumber -> localhost:1234
+]
+
+parcel:
+[
+  parcel is doing HMR(Hot Module Replacement) that is parcel will keep track of all the files 
+  that you are updating and restart the server.
+
+  parcel has file Watcher algorithms(written in C++)
+
+  Bundling
+
+  Minify
+
+  Clearing our code
+
+  dev and production build
+
+  super fast build algorithm
+
+  Image Optimization
+
+  Caching while development(takes less time after each time)
+
+  Compression
+
+  Compatible with older version of browser
+
+  Gives us functionality that we just build our app on https(HTTPS on dev machine)
+  [
+    npx parcel index.html(entryPoint) --https
+  ]
+
+  Manages port number
+
+  Consistent Hashing algorithm
+
+  Zero Configuration(you dont have to do anything)
+]
+
+we should put parcel-chace in gitignore
+.parcel-cache is the space used by parcel to execute its functionality
+
+[
+dist folder keeps the files minified for us and bundles all the code in 3 files(html, css, js) for production.
+
+npx parcel build index.html -> production build
+npx parcel index.html -> development build
+
+and in this minified files all the import packages code is inserted.
+]
+
+[
+  how to make our app work on older version of browsers
+
+  we will use --> browserList in package.json
+  and it will take array(check browserlist.dev website for more info)
+
+  "browserlist":['last 2 versions'] -> app will work on last 2 version of all the browsers available.
+]

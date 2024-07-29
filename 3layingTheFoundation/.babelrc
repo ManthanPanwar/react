@@ -1,0 +1,4 @@
+{
+  // "plugins": [["transform-remove-console", { "exclude": ["error", "warn"] }]]
+}
+// removes console.log() but excludes console.log(err) and with warnings.

@@ -1,0 +1,40 @@
+Polyfill means implementing some new functionality using vanilla code so that it can work on older version of browsers.
+Example: Array.map() we can make Polyfill of this function.
+
+babel --> it converts our newer code to older code, and browserlist keeps track of which versions of code you need.
+
+we can insert 'start' key in package.json to run our program easily.
+
+you can add as many scripts as you want and npm will run all the scripts for you.
+
+npm is used to install some package.
+npx is used to execute package.
+[npx === npm run]
+
+npm run start(npm start) will run our project.
+
+[
+  babel-plugin-transform-remove-console  => removes console.log() from our code
+
+  .babelrc is a Configuration file
+]
+
+[
+  if you have multiple siblings then you always have to give them keys.
+
+  if you don't have keys then React has to do a lot of work if something new is appended and re-renders it. 
+
+  so you give keys to uniquely identify the sibling.
+]
+
+[
+  (<h1 id="title" key="key1 ">Namaste Monu</h1>)  --> JSX expression.
+
+  JSX prevents XSS(cross site scripting)attack.
+
+  JSX is very safe(sanitization).
+]
+
+[
+  
+]

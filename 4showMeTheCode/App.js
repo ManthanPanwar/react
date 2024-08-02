@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import foodVilla from "./images/foodVilla.png";
-import burgerKing from "./images/burgerKing.png";
+import foodVillaImage from "./images/foodVilla.png";
+import burgerKingImage from "./images/burgerKing.png";
 
 /*
       Header
@@ -21,19 +21,25 @@ import burgerKing from "./images/burgerKing.png";
         - copyright
       */
 
-const JsxExample = () => <img id="logo" src={foodVilla} alt="logo" />;
+const JsxExample = () => {
+  return (
+    <>
+      <a href="/">
+        <img id="logo" src={foodVillaImage} alt="logo" />
+      </a>
+
+      <h1 id="title" key="h1">
+        Food Villa
+      </h1>
+    </>
+  );
+};
 
 const Header = () => {
   return (
     <div className="header">
       {<JsxExample />}
-      <h1 id="title" key="h1">
-        Food Villa
-      </h1>
       <div className="nav-items">
-        {
-          // inline styleing(done using JS objects)
-        }
         <ul style={{ color: "green" }}>
           <li>Home</li>
           <li>About</li>
@@ -45,40 +51,55 @@ const Header = () => {
   );
 };
 
+// Dynamic UI
+// config driven UI(we dont create different websites for different cities/states
+// rather we create config driven UI which will adjust itself as per the location).
+// backend is driving the config
+const burgerKing = {
+  name: "Burger King",
+  image: `${burgerKingImage}`,
+  cusines: ["Burger", "American"],
+  rating: "4.2",
+};
+// use .join('joiner') to join array items.
+
+// here the RestrauntCard is hard-coded
+// we need to make it dynamic using javascript inside html and create restraunts objects.
 const RestrauntCard = () => {
   return (
     <div className="card">
-      <img src={burgerKing} alt="burger-king" />
-      <h2>Burger King</h2>
-      <h3>Burgers, American</h3>
-      <h4>4.2 stars</h4>
+      <img src={burgerKing.image} alt="burger-king" />
+      <h2>{burgerKing.name}</h2>
+      <h3>{burgerKing.cusines}</h3>
+      <h4>{burgerKing.rating} stars</h4>
     </div>
   );
 };
 
 const Body = () => {
   return (
-    <div>
+    <div className="restrau">
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
       <RestrauntCard />
     </div>
   );
 };
 const Footer = () => <h3>footer</h3>;
 
-// any piece of JSX expression that you write, there can only be one parent Element
-// so you must write multiple element inside a div.
 const AppLayout = () => {
   return (
-    // <div>
-    //   <Header />
-    //   <Body />
-    //   <Footer />
-    // </div>
-    // <React.Fragment>
-    //   <Header />
-    //   <Body />
-    //   <Footer />
-    // </React.Fragment>
     <>
       <Header />
       <Body />
@@ -86,12 +107,6 @@ const AppLayout = () => {
     </>
   );
 };
-
-// now the problem is we have (div and inside it another div and inside it we have (header, body, footer)),
-// but we want to have only one div.
-// to solve this we have React.Fragment(it is a component which is exported by React)
-// React.Fragment is like a empty tag
-// and to further simplify the code we have <> </> empty tags.
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(AppLayout());

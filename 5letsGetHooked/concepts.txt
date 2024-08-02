@@ -1,0 +1,29 @@
+export default:
+[
+  you can only export one thing using 'export default _____' and not multiple things.
+
+  you can import by renaming it if you have used default export.
+
+  Default import
+  [
+    and you can import by this ----> import ______ from "path";
+  ]
+
+  and still you want to send multiple export using default ---> then wrap it inside object and send the object.
+]
+
+for exporting multiple things:
+[
+  you can directly export by writing 'export' in front of functions definition.
+
+  you can't rename the name of component while importing if you have used named export.
+
+  Named import
+  [
+    and you can import by this ----> import { _______ } from "path";
+  ]
+]
+
+[
+  you can use any file(either js or jsx)
+]

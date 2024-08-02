@@ -35,3 +35,64 @@ Q: Is JSX mandatory for React?
 
 Example of JSX
 const sample = <h2>Greetings</h2>;
+
+
+Destructure on the fly:
+[
+  const RestaurantCard = ({ name, cuisines, cloudinaryImageId, avgRating })
+
+  if I want to Destructure on the fly then I have to pass all of them as individual props
+
+  <RestaurantCard name = {restaurantList[0].info.name} cuisines = {restaurantList[0].info.cuisines} ..... />
+
+  AND THERE IS ONE SHORTCUT TO PASS ALL PROPS AT ONCE(USING 'SPREAD' OPERATOR)
+  <RestaurantCard {...restaurantList[0].info}
+]
+
+Virtual DOM:
+[
+  we keep a representation of DOM with us and this is known as VirtualDOM.
+
+  why VirtualDOM?
+  [
+    we need VirtualDOM for reconciliation in React.
+
+    coz when React does reconciliation
+  ]
+]
+
+Reconciliation(the process is called as reconciliation):
+[
+  It is an Diff algorithm that React uses to diff one tree from other and it determines what needs to change in UI 
+  and what does not need to change in UI, and just changes what needs to be changed(only re-renders what is changed).
+]
+
+
+keys in React:
+[
+  suppose you have multiple children with same attribute(like all are div or all are span), now can't differentiate between them.
+
+  so now React will re-render all the attribute again even though they are not changed.
+
+  therefore React needs key for same elements so that it can know which element was changed and then re-renders it.
+]
+
+[
+  React does not need key if all the siblings have different attribute(like one is img, one is div, one is span, ...)
+]
+
+keys assignment
+[
+  no keys <<<<<< index as keys << unique keys
+]
+
+React Fiber
+[
+  it is a new React Reconciliation algorithm
+]
+
+props:
+[
+  it is just like arguments in a function.
+  and functional component is just like a function.
+]

@@ -1,4 +1,4 @@
-export const Title = () => {
+const Title = () => {
   return (
     <>
       <a href="/">
@@ -18,7 +18,6 @@ export const Title = () => {
   );
 };
 
-// export const Header = () => {
 const Header = () => {
   return (
     <div className="header">
@@ -35,5 +34,4 @@ const Header = () => {
   );
 };
 
-// export default Title;
 export default Header;

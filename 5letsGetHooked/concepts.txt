@@ -27,3 +27,69 @@ for exporting multiple things:
 [
   you can use any file(either js or jsx)
 ]
+
+config File:(constants file)
+[
+  I put all the hard coded things inside my config file.
+]
+
+one way data binding
+[
+  if you create a input tag and then insert into it, it will not let you insert into it coz react uses one-way-data-binding.
+
+  if you want to do it, then you have to do two-way data binding    
+]
+
+[
+  onChange = {() => onChangeInput} --> onChange takes a function which has a event.
+]
+
+[
+  local variables are not preferred in React.
+
+  whenever you have to change a variable inside React ---> then you need a React kind of variable.
+]
+
+React-variable
+[
+  React variable is kind of like a State variable.
+
+  Every component in React maintains a state.
+
+  Everytime you need to create a local variable, you use state variable in it and those state variable are created using useState() hook.
+
+  when I create a variable using useState(), I can not directly modify it.
+  you can only modify it using a function which is given by useState().
+]
+
+Hooks:
+[
+  hooks are just normal functions.
+
+  hooks gives us some functionalities(like useState() is used to create variables.)
+
+  useState():
+  [
+    this hook(function) returns a array.
+
+    the first element of array is variable name.
+    the second element of array is a function which is used to change the variable value.
+  ]
+]
+
+[
+  Two way data binding ---> reading + writing  --->  at the same time.
+]
+
+[
+  why not use normal variables coz when some event or some functional component changes the value of the variable React would not 
+  know that the value is changed and it will not re-render.
+]
+
+[
+  if you want your variables to be in sync with the UI you need to use your state variables.
+]
+
+[
+  when you create a variable using useState(), React keeps a track of what is happening to that variable and if some change occur, then it re-renders it.
+]
